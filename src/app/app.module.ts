@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TestprimengComponent } from './components/testprimeng/testprimeng.component';
-import { CalendarModule } from 'primeng-lts/calendar';
 import { FormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { TestprimengComponent } from './components/testprimeng/testprimeng.component';
+
+import { CalendarModule } from 'primeng-lts/calendar';
+import { ButtonModule } from 'primeng-lts/button';
 
 @NgModule({
   declarations: [AppComponent, TestprimengComponent],
@@ -16,6 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     CalendarModule,
     FormsModule,
+    ButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

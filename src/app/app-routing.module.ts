@@ -8,6 +8,16 @@ const routes: Routes = [
     component: TestprimengComponent,
   },
   {
+    path: 'usuario',
+    loadChildren: () =>
+      import('./usuario/usuario.module').then((m) => m.UsuarioModule),
+  },
+  {
+    path: 'proyecto',
+    loadChildren: () =>
+      import('./proyecto/proyecto.module').then((m) => m.ProyectoModule),
+  },
+  {
     path: 'remodelacion',
     loadChildren: () =>
       import('./remodelacion/remodelacion.module').then(

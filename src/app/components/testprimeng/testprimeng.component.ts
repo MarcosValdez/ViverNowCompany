@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestprimengComponent implements OnInit {
   value: Date;
+  //texto de prueba
   constructor() {
     // this.value = new Date();
   }
-
   ngOnInit(): void {}
 }

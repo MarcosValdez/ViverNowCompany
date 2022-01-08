@@ -1,1 +1,83 @@
-<p>nuevo-proyecto works!</p>
+<div class="p-col-10 p-offset-1">
+  <h2>Remodelacion - Nombre proyecto</h2>
+  <p-divider></p-divider>
+  <div class="p-fluid p-formgrid p-grid">
+    <div class="p-field p-col-12 p-md-6">
+      <label for="precioId">Precio de inmueble</label>
+      <input id="precioId" type="number" pInputText />
+    </div>
+    <div class="p-field p-col-12 p-md-6">
+      <label for="metroCuadradoId">Metro cuadrado</label>
+      <input id="metroCuadradoId" type="number" pInputText />
+    </div>
+    <div class="p-field p-col-12 p-md-6">
+      <label for="accesorioId">Accesorios</label>
+      <input id="accesorioId" type="text" pInputText />
+    </div>
+
+    <div class="p-field p-col-12 p-md-6">
+      <label for="state">Pisos</label>
+      <p-dropdown
+        inputId="state"
+        [options]="states"
+        [(ngModel)]="selectedState"
+        placeholder="Select"
+        optionLabel="name"
+      ></p-dropdown>
+    </div>
+  </div>
+  <h2>Pintura</h2>
+  <p-divider></p-divider>
+  <div class="p-fluid p-formgrid p-grid">
+    <div class="p-field p-col-12 p-md-6">
+      <label for="metrosId">Metros cuadrados</label>
+      <input id="metrosId" type="number" pInputText />
+    </div>
+    <div class="p-field p-col-12 p-md-6">
+      <label for="pmetroCuadradoId">Precio por metro cuadrado</label>
+      <input id="pmetroCuadradoId" type="number" pInputText />
+    </div>
+  </div>
+  <h2>Puertas</h2>
+  <p-divider></p-divider>
+  <div class="p-fluid p-formgrid p-grid">
+    <div class="p-field p-col-12 p-md-6">
+      <label for="pPreciosId">Precio</label>
+      <input id="pPrecioId" type="number" pInputText />
+    </div>
+    <div class="p-field p-col-12 p-md-6">
+      <label for="pCantidadId">Cantidad</label>
+      <input id="pCantidadId" type="number" pInputText />
+    </div>
+  </div>
+  <h2>Ventanas</h2>
+  <p-divider></p-divider>
+  <div class="p-fluid p-formgrid p-grid">
+    <div class="p-field p-col-12 p-md-6">
+      <label for="pPreciosId">Precio</label>
+      <input id="pPrecioId" type="number" pInputText />
+    </div>
+    <div class="p-field p-col-12 p-md-6">
+      <label for="pCantidadId">Cantidad</label>
+      <input id="pCantidadId" type="number" pInputText />
+    </div>
+  </div>
+  <div class="p-fluid p-formgrid p-grid">
+    <div class="p-field p-col-12 p-md-6">
+      <button
+        pButton
+        type="button"
+        label="Cancelar"
+        class="p-button-danger"
+      ></button>
+    </div>
+    <div class="p-field p-col-12 p-md-6">
+      <button
+        pButton
+        type="button"
+        label="Guardar"
+        class="p-button-success"
+      ></button>
+    </div>
+  </div>
+</div>

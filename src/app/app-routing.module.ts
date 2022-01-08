@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { TestprimengComponent } from './components/testprimeng/testprimeng.component';
 
 const routes: Routes = [
   {

@@ -6,22 +6,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 
-import { TestprimengComponent } from './components/testprimeng/testprimeng.component';
-
-import { CalendarModule } from 'primeng-lts/calendar';
-import { ButtonModule } from 'primeng-lts/button';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpErrorService } from './core/interceptors/http-error.service';
+import { NavbarComponent } from './core/layout/navbar/navbar.component';
 
 @NgModule({
-  declarations: [AppComponent, TestprimengComponent],
+  declarations: [AppComponent, NavbarComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    CalendarModule,
     FormsModule,
-    ButtonModule,
     HttpClientModule,
   ],
   providers: [

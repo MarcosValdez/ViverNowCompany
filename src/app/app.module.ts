@@ -10,6 +10,7 @@ import { TestprimengComponent } from './components/testprimeng/testprimeng.compo
 
 import { CalendarModule } from 'primeng-lts/calendar';
 import { ButtonModule } from 'primeng-lts/button';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, TestprimengComponent],
@@ -20,6 +21,7 @@ import { ButtonModule } from 'primeng-lts/button';
     CalendarModule,
     FormsModule,
     ButtonModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

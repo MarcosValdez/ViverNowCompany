@@ -12,6 +12,21 @@
   </div>
 
   <div class="nav-links">
-    <a routerLink="/">Login</a>
+    <button
+      pButton
+      type="button"
+      label="Login"
+      class="p-button-info"
+      (click)="login()"
+      *ngIf="!usuarioRegistrado"
+    ></button>
+    <button
+      pButton
+      type="button"
+      label="Logout"
+      class="p-button-danger"
+      (click)="logout()"
+      *ngIf="usuarioRegistrado"
+    ></button>
   </div>
 </div>

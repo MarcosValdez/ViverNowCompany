@@ -24,6 +24,15 @@ const routes: Routes = [
         (m) => m.RemodelacionModule
       ),
   },
+  {
+    path: 'portafolio',
+    loadChildren: () =>
+      import('./portafolio/portafolio.module').then((m) => m.PortafolioModule),
+  },
+  {
+    path: '**',
+    redirectTo: '',
+  },
 ];
 
 @NgModule({

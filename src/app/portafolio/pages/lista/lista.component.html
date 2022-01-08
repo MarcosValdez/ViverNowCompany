@@ -1,0 +1,46 @@
+<div class="p-col-10 p-offset-1">
+  <div class="p-grid">
+    <div class="p-col-12"><h2>Portafolios</h2></div>
+    <div class="p-col-8 p-offset-2">
+      <div class="p-fluid">
+        <div class="p-field">
+          <span class="p-input-icon-left">
+            <i class="pi pi-search"></i>
+            <input
+              type="text"
+              pInputText
+              [(ngModel)]="value1"
+              placeholder="Search"
+            />
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="p-col-4" *ngFor="let x of [1, 2, 3]">
+      <p-card
+        header="Proyecto {{ x }}"
+        [style]="{ width: '300px' }"
+        styleClass="p-card-shadow"
+      >
+        <ng-template pTemplate="header">
+          <img
+            alt="Card"
+            src="https://www.primefaces.org/primeng/v11-lts/assets/showcase/images/usercard.png"
+          />
+        </ng-template>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore
+        </p>
+        <ng-template pTemplate="footer">
+          <p-button label="Save" icon="pi pi-check"></p-button>
+          <p-button
+            label="Cancel"
+            icon="pi pi-times"
+            styleClass="p-button-secondary"
+            [style]="{ 'margin-left': '.5em' }"
+          ></p-button>
+        </ng-template>
+      </p-card>
+    </div>
+  </div>
+</div>

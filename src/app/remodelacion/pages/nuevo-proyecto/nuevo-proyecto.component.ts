@@ -18,12 +18,4 @@ export class NuevoProyectoComponent implements OnInit {
     { name: '4', code: 'Ohio' },
     { name: '5', code: 'Washington' },
   ];
-
-  cities1: any[] = [];
-
-  cities2: any[] = [];
-
-  city1: any = null;
-
-  city2: any = null;
 }

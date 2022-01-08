@@ -1,0 +1,43 @@
+<p-dialog
+  header="Crear portafolio"
+  [(visible)]="display"
+  [style]="{ width: '50vw' }"
+  [baseZIndex]="10000"
+>
+  <div class="p-fluid">
+    <div class="p-field">
+      <label for="firstname1">Nombre</label>
+      <input id="firstname1" type="text" pInputText />
+    </div>
+    <div class="p-field">
+      <label for="lastname1">Descripción</label>
+      <textarea [rows]="5" [cols]="30" pInputTextarea></textarea>
+    </div>
+  </div>
+  <div class="p-grid p-jc-end">
+    <div class="p-col-2">
+      <button
+        pButton
+        type="button"
+        label="Guardar"
+        class="p-button-success"
+      ></button>
+    </div>
+    <div class="p-col-2">
+      <button
+        pButton
+        type="button"
+        label="Cancelar"
+        class="p-button-danger"
+      ></button>
+    </div>
+  </div>
+</p-dialog>
+
+<button
+  pButton
+  type="button"
+  (click)="showDialog()"
+  icon="pi pi-info-circle"
+  label="Show"
+></button>

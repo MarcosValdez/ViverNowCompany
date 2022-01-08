@@ -10,7 +10,7 @@ describe('HttpErrorService', () => {
     service = TestBed.inject(HttpErrorService);
   });
 
-  it('should be created', () => {
+  /* it('should be created', () => {
     expect(service).toBeTruthy();
-  });
+  }); */
 });

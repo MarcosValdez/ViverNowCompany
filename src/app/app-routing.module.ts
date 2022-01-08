@@ -30,6 +30,13 @@ const routes: Routes = [
       import('./portafolio/portafolio.module').then((m) => m.PortafolioModule),
   },
   {
+    path: 'remate',
+    loadChildren: () =>
+      import('./remate-judicial/remate-judicial.module').then(
+        (m) => m.RemateJudicialModule
+      ),
+  },
+  {
     path: '**',
     redirectTo: '',
   },

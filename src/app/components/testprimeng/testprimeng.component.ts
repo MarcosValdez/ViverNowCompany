@@ -11,6 +11,5 @@ export class TestprimengComponent implements OnInit {
   constructor() {
     // this.value = new Date();
   }
-
   ngOnInit(): void {}
 }

@@ -12,6 +12,10 @@
   </div>
 
   <div class="nav-links">
+    <a routerLink="/portafolio" *ngIf="usuarioRegistrado">Portafolios</a>
+    <a routerLink="/remodelacion/nuevo" *ngIf="usuarioRegistrado"
+      >Remodelacion</a
+    >
     <button
       pButton
       type="button"

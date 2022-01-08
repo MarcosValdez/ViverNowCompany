@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { NavbarService } from '../../services/navbar.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { NavbarService } from '../../services/navbar.service';
 export class NavbarComponent implements OnInit, AfterViewInit {
   usuarioRegistrado: boolean;
 
-  constructor(private navbarService: NavbarService) {}
+  constructor(private navbarService: NavbarService, private router: Router) {}
 
   ngOnInit(): void {
     this.navbarService.changeLogin.subscribe((res) => {
@@ -28,6 +29,7 @@ export class NavbarComponent implements OnInit, AfterViewInit {
     this.navbarService.changeLogin.emit(
       this.navbarService.getIsAuthenticated()
     );
+    this.router.navigate(['/portafolio']);
   }
   logout() {
     this.navbarService.logout();

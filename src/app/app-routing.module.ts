@@ -5,10 +5,6 @@ import { TestprimengComponent } from './components/testprimeng/testprimeng.compo
 const routes: Routes = [
   {
     path: '',
-    component: TestprimengComponent,
-  },
-  {
-    path: 'usuario',
     loadChildren: () =>
       import('./usuario/usuario.module').then((m) => m.UsuarioModule),
   },

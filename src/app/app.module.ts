@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpErrorService } from './core/interceptors/http-error.service';
 import { NavbarComponent } from './core/layout/navbar/navbar.component';
+import { ButtonModule } from 'primeng-lts/button';
 
 @NgModule({
   declarations: [AppComponent, NavbarComponent],
@@ -18,6 +19,7 @@ import { NavbarComponent } from './core/layout/navbar/navbar.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    ButtonModule,
   ],
   providers: [
     {

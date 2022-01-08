@@ -1,1 +1,34 @@
-<p>proyeccion-rentabilidad works!</p>
+<div class="p-col-10 p-offset-1">
+  <h2>Proyección de rentabilidad</h2>
+  <p-divider></p-divider>
+  <p-table [value]="products">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Venta</th>
+        <th>5%</th>
+        <th>3%</th>
+        <th>Monto final</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-product>
+      <tr>
+        <td>{{ product.venta }}</td>
+        <td>{{ product.porcentaje5 }}</td>
+        <td>{{ product.porcentaje3 }}</td>
+        <td>{{ product.monto }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+  <br />
+  <br />
+  <div class="p-fluid p-formgrid p-grid">
+    <div class="p-field p-col-12 p-md-3">
+      <button
+        pButton
+        type="button"
+        label="Vovler"
+        class="p-button-danger"
+      ></button>
+    </div>
+  </div>
+</div>

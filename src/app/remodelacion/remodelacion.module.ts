@@ -11,6 +11,7 @@ import { DropdownModule } from 'primeng-lts/dropdown';
 import { InputTextareaModule } from 'primeng-lts/inputtextarea';
 import { ButtonModule } from 'primeng-lts/button';
 import { DividerModule } from 'primeng-lts/divider';
+import { TableModule } from 'primeng-lts/table';
 
 @NgModule({
   declarations: [NuevoProyectoComponent, ProyeccionRentabilidadComponent],
@@ -23,6 +24,7 @@ import { DividerModule } from 'primeng-lts/divider';
     InputTextareaModule,
     ButtonModule,
     DividerModule,
+    TableModule,
   ],
 })
 export class RemodelacionModule {}

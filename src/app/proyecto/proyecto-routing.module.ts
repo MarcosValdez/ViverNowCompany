@@ -4,7 +4,7 @@ import { CrearComponent } from './crear/crear.component';
 
 const routes: Routes = [
   {
-    path: 'registro',
+    path: 'crear',
     component: CrearComponent,
   },
 ];

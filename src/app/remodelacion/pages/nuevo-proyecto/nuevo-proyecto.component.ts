@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RemodelacionService } from '../../services/remodelacion.service';
 
 @Component({
   selector: 'app-nuevo-proyecto',
@@ -6,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nuevo-proyecto.component.css'],
 })
 export class NuevoProyectoComponent implements OnInit {
-  constructor() {}
+  constructor(private remodService: RemodelacionService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.remodService.getAllRemodelaciones().subscribe((x) => console.log(x));
+  }
   selectedState: any = null;
 
   states: any[] = [

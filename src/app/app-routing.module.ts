@@ -1,14 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { TestprimengComponent } from './components/testprimeng/testprimeng.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: TestprimengComponent,
-  },
-  {
-    path: 'usuario',
     loadChildren: () =>
       import('./usuario/usuario.module').then((m) => m.UsuarioModule),
   },
@@ -43,7 +38,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' }),
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

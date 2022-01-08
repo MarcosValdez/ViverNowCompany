@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 import { RemodelacionRoutingModule } from './remodelacion-routing.module';
 import { NuevoProyectoComponent } from './pages/nuevo-proyecto/nuevo-proyecto.component';
@@ -25,6 +26,7 @@ import { TableModule } from 'primeng-lts/table';
     ButtonModule,
     DividerModule,
     TableModule,
+    HttpClientModule,
   ],
 })
 export class RemodelacionModule {}

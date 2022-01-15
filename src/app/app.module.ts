@@ -10,9 +10,10 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpErrorService } from './core/interceptors/http-error.service';
 import { NavbarComponent } from './core/layout/navbar/navbar.component';
 import { ButtonModule } from 'primeng-lts/button';
+import { SpinnerComponent } from './core/layout/spinner/spinner.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent],
+  declarations: [AppComponent, NavbarComponent, SpinnerComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

@@ -6,16 +6,25 @@ import {
   HttpErrorResponse,
 } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, catchError, throwError } from 'rxjs';
+import { Observable, catchError, throwError, map, debounceTime } from 'rxjs';
+import { SpinnerService } from '../services/spinner.service';
 
 @Injectable()
 export class HttpErrorService implements HttpInterceptor {
-  constructor() {}
+  constructor(private spinnerService: SpinnerService) {}
   intercept(
     req: HttpRequest<any>,
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
-    return next.handle(req).pipe(catchError(this.handleError));
+    this.spinnerService.requestStarted();
+    return next.handle(req).pipe(
+      debounceTime(50000),
+      map((response) => {
+        this.spinnerService.requestEnded();
+        return response;
+      }),
+      catchError(this.handleError)
+    );
   }
 
   private handleError(error: HttpErrorResponse) {
@@ -27,6 +36,7 @@ export class HttpErrorService implements HttpInterceptor {
       console.log('Error:', error.error);
     }
     //catch and rethrow
+    this.spinnerService.resetSpinner();
     return throwError('Cannot perform the request, please try again later');
   }
 }

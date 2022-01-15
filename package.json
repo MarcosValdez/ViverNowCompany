@@ -12,7 +12,7 @@
     "hook": "husky add .husky/pre-commit \"npx --no-install pretty-quick --staged $1\"",
     "pretty-quick": "pretty-quick",
     "e2e": "ng e2e",
-    "heroku-postbuild": "ng build --prod"
+    "heroku-postbuild": "ng build --configuration production"
   },
   "private": true,
   "dependencies": {

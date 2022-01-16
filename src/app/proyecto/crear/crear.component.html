@@ -1,1 +1,53 @@
-<p>crear works!</p>
+<div class="p-col-10 p-offset-3">
+  <h1>Proyecto</h1>
+  <p-divider></p-divider>
+
+  <div class="p-fluid p-formgrid p-grid">
+    <div class="p-field p-col-6">
+      <label for="nombreID">Nombre</label>
+      <input id="nombreID" type="text" pInputText />
+    </div>
+
+    <div class="p-field p-col-6"></div>
+
+    <div class="p-field p-col-6">
+      <label for="descripcionID">Descripción</label>
+      <input id="descripcionID" type="text" pInputText />
+    </div>
+
+    <div class="p-field p-col-6"></div>
+
+    <div class="p-field p-col-6">
+      <label for="ubicacionID">Ubicación</label>
+      <input id="ubicacionID" type="text" pInputText />
+    </div>
+
+    <div class="p-field p-col-6"></div>
+
+    <div class="p-field p-col-6">
+      <label for="state">Tipo de proyecto</label>
+      <p-dropdown
+        inputId="state"
+        [options]="states"
+        [(ngModel)]="selectedState"
+        placeholder="Select"
+        optionLabel="name"
+      ></p-dropdown>
+    </div>
+
+    <div class="p-field p-col-6"></div>
+
+    <div class="p-field p-col-6">
+      <div class="p-grid p-jc-end">
+        <div class="p-col-12">
+          <button
+            pButton
+            type="button"
+            label="Crear"
+            class="p-button-success"
+          ></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -9,4 +9,12 @@ export class CrearComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  selectedState: any = null;
+
+  states: any[] = [
+    { name: 'Construcción' },
+    { name: 'Remodelación' },
+    { name: 'Remate Judicial' },
+  ];
 }
